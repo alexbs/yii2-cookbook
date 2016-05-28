@@ -31,6 +31,11 @@ The line `require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');` could be change
  * Yii bootstrap file.
  * Used for enhanced IDE code autocompletion.
  */
+ 
+//this line is required, or we will get "Fatal error: Class 'yii\BaseYii' not found"
+//So I think this line must be here! Thank's to Sam for this CookBook!
+require(__DIR__ . '/vendor/yiisoft/yii2/BaseYii.php'); 
+ 
 class Yii extends \yii\BaseYii
 {
     /**
